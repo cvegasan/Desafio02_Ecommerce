@@ -1,0 +1,123 @@
+body{
+    margin: 0px;          /* sin margenes a los lados */
+    font-family: 'Poppins', sans-serif; /* cuando no funciona la primera, se ocupa la segunda, sino la tercera. estos son los "fallbacks" */
+}
+body *{                 /* reseteo de etiquetas (*) significa todo, todas las etiquetas dentro de body */
+    margin: 0px;
+    border: 0px;        /* rich black hexadecimal #RRGGBB*/
+    padding: 0px;       /* sin margenes a los lados */
+}
+/* definición del layout del grid*/
+.cls-definicion-layout-grid {
+    display: grid;
+    height: 100vh; /*Todos los height de las areas, deben sumar el total del height del layout*/
+    grid-template-areas:
+        'nav nav'
+        'menu section'
+        'footer footer';
+    grid-template-columns: 1fr 6fr;
+}
+/* definición de las areas del layout del grid*/
+nav {
+    grid-area: nav;
+    background-color:#00537B;
+    color:white;
+    height: 10vh; /*Todos los height de las areas, deben sumar el total del height del layout*/
+}
+menu {
+    grid-area: menu;
+    background-color: lightgray;
+    height: 85vh; /*Todos los height de las areas, deben sumar el total del height del layout*/
+}
+section {
+    grid-area: section;
+    background-color: lightgray; /*gray;*/
+    height: 85vh; /*Todos los height de las areas, deben sumar el total del height del layout*/
+}
+
+footer {
+    grid-area: footer;
+    background-color:#FFFFFF;
+    height: 5vh; /*Todos los height de las areas, deben sumar el total del height del layout*/
+}
+/* definición de las clases utilizadas*/
+.cls-formato-nav-footer{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+}
+.cls-alto-nav{
+    height:10vh;
+}
+.cls-alto-footer{
+    height:5vh;
+}
+.cls-formato-footer{
+    font-size: 14px;
+}
+
+.cls-formato-ecommerce{
+    font-size: 24px;
+}
+.cls-padding-items-menu{
+    padding-bottom: 20px;
+}
+.cls-alineacion-items-menu{
+    padding: 20px 0 0 40px;
+}
+.cls-alineacion-texto-cantidad{
+    display:flex;
+    font-size:14px;
+}
+.cls-color-cantidad{
+    color:#787D85;
+}
+.cls-grid-container-productos {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-gap: 10px;
+    grid-column-gap: 60px;
+    background-color: lightgray;
+    margin: 13px 30px 5px 30px;
+    padding: 0px 80px 0px 80px;
+}
+
+.cls-grid-container-productos > div {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0 0 0;
+    font-size: 30px;
+}
+.cls-contenedor-card{
+    width: 200px;
+}
+.cls-tamannio-card{
+    width: 150px;
+    height: 150px;
+}
+.cls-formato-nombre-productos{
+    font-size: 14px;
+    font-weight: bold;
+}
+.cls-color-nombre-producto{
+    color:#444449;
+}
+
+.cls-formato-precio-productos{
+    font-size: 12px;
+    font-weight: bold;
+}
+.cls-color-precio-producto{
+    color:#61646A;
+}
+
+.cls-formato-comprar{
+    font-size: 12px;
+    width:100%;
+    cursor: pointer;
+}
+.cls-color-comprar{
+    background-color: #00537B;
+    color:#FFFFFF;
+}
